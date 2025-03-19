@@ -1,13 +1,72 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0; /* Light background */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 306px;
+  margin:  10px auto;
+  padding: 50px;
+  background-color: #3a3c3e; /* Dark background for the board */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add some depth */
+}
+.square.selected {
+  background-color: #ccc; /* Highlight the selected square */
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #fff; /* White squares */
+  border: 1px solid #ddd; /* Light border */
+  font-size: 36px;
+  line-height: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease; /* Smooth transition */
+}
+
+.square:hover {
+  background-color: #f5f5f5; /* Light hover effect */
+}
+
+.square:active {
+  transform: scale(0.95); /* Pressed effect */
+}
+
+/* Differentiate X and O with colors */
+.square.X {
+  color: #09C372; /* Green for X */
+}
+
+.square.O {
+  color: #498AFB; /* Blue for O */
+}
+
+/* Winner message styling */
+.winner-message {
+  font-size: 20px;
+  color: #1ed86c; /* Green for winner message */
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Reset button styling */
+.reset-button {
+  width: 150px;
+  height: 40px;
+  margin: 20px auto;
+  background-color: #1ed86c; /* Green for reset button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: #1db954; /* Darker green on hover */
 }
