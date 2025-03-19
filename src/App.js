@@ -1,6 +1,7 @@
 import React from 'react';
-import Board from './Board';
+import Board from './components/Board';
 import './App.css';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <div className='heading'>
       <h1>KinderDuo XOXO</h1>
       </div>
+      <Analytics/>
       <Board />
       <div className='Footer'>
         With ❤️ from Aryan and Ayush
