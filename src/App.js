@@ -12,7 +12,7 @@ function App() {
       <Analytics/>
       <Board />
       <div className='Footer'>
-        With ❤️ from Aryan and Ayush
+        With ❤️ by Aryan and Ayush
       </div>
     </div>
   );
